@@ -61,6 +61,7 @@ RUN apt-get install -y build-essential gawk pmount libtool nasm yasm automake cm
 		--enable-nfs \
 		--enable-upnp \
 		--enable-ssh \
+                --enable-non-free \
 		--disable-libbluray \
 		--disable-debug \
 		--disable-vdpau \
@@ -90,7 +91,6 @@ RUN apt-get install -y build-essential gawk pmount libtool nasm yasm automake cm
 		--disable-spectrum \
 		--disable-waveform \
 		--disable-avahi \
-		--disable-non-free \
 		--disable-texturepacker \
 		--disable-pulse \
 		--disable-dbus \
