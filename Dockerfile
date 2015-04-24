@@ -1,11 +1,5 @@
 # docker-xbmc-server
 #
-# Setup: Clone repo then checkout appropriate version
-#   For stable (Helix)
-#     $ git checkout master
-#   For experimental (master development)
-#     $ git checkout experimental
-#
 # Create your own Build:
 # 	$ docker build --rm=true -t $(whoami)/docker-xbmc-server .
 #
@@ -39,7 +33,7 @@ RUN apt-get update && \
 	apt-get -y install git openjdk-7-jre-headless supervisor
 
 # Download XBMC, pick version from github
-RUN git clone --depth 1 --branch "14.0-Helix" https://github.com/xbmc/xbmc.git 
+RUN git clone --depth 1 --branch "Helix" https://github.com/xbmc/xbmc.git
 
 # Add patches and xbmc-server files
 ADD src/fixcrash.diff xbmc/fixcrash.diff
